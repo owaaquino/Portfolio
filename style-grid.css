@@ -21,13 +21,13 @@ body{
 #container {
 	height: 100vh;
 	margin-top: 30px;	
-	display: 	flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
 }
 
 #introduction  {
-	order: 2;
 	padding-top: 30px;
+	order: 2;
 }	
 
 #introduction .myName {
@@ -76,7 +76,7 @@ a.socialButton {
 
 #logo {
 	margin: 0 auto;
-	width: 45%;
+	width: 55%;
 	order: 1;
 }
 
@@ -85,55 +85,56 @@ a.socialButton {
 
 }
 
+#footer {
+	font-size: 10pt;
+	margin-top: 20px;
+	text-align: center;
+	order: 3;
+}
 .heart {
 	color: pink;
 }
-/* DESKTOP */
 
 @media screen and (min-width: 500px) {
 	#container {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-around;
+		display: grid;
+		margin: 0;
+		grid-template-columns: 10% 40% 40% 10%;
+		grid-template-rows: 10% auto 20%;
 	}
-
-	#introduction  {
-		font-size: 30pt;
-		letter-spacing: 2pt;
-		min-height: 100vh;
-		display: flex;
-		flex-flow: column;
-		padding: 0 30px;
-		order: 1;
-	}	
 
 	#introduction {
-		width: 50%;
-	}
-
-	#introduction p {
-		font-size: 30pt;
-	}
-
-	#introduction h1{
-		font-size: 80pt;
-		margin: 0;
-		width: 30%;
-	}
-
-	#social {
-		margin: 0 auto;
-	}
-
-	.socialButton {
-		font-size: 14pt;
-	}
-
-	.socialButton img {
-		width: 50px;
+		grid-column: 2/3;
+		grid-row: 2/3;
 	}
 
 	#logo {
-		order: 2;
+		grid-column: 3/4;
+		grid-row: 2/3;
+		width: 90%;
+	
+	}
+
+	#introduction  {
+		letter-spacing: 2pt;
+		padding: 0 30px;
+	}	
+
+	#introduction p{
+		font-size: 25pt;
+		margin: 0;
+	}
+
+	#social {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	#footer {
+		margin: 0;
+		grid-column: 2/4;		
+		grid-row: 3/4;
+  	justify-self: center;
+  	align-self: center;
 	}
 }

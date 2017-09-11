@@ -8,6 +8,11 @@ ul, li {
 	list-style: none;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 html {
     color:black;
     font-family: sans-serif;
@@ -24,6 +29,8 @@ body{
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 }
+
+/* HOME/INDEX PAGE */
 
 #introduction  {
 	padding-top: 30px;
@@ -56,22 +63,27 @@ a.socialButton {
 	text-decoration: none;
 	color: #fff;
 	font-size: 11pt;
+	display: grid;
+	grid-template-columns:20% auto;
 }
 
 .socialButton img,
 .socialButton span {
 	vertical-align: middle;
+	align-self: center;
 }
 
 .socialButton img{
 	display: inline;
 	width: 33px;
 	margin: 5px 10px 5px 15px;
+	grid-column: 1/2;
 }
 
 .socialButton span {
 	margin-right: 15px;
 	font-size: 9pt;
+	grid-column: 2/3;
 }
 
 #logo {
@@ -85,9 +97,20 @@ a.socialButton {
 
 }
 
+/* PROJECTS PAGE */
+
+#header {
+	grid-row-start: 1;
+}
+
+#projects {
+	grid-row-start: 2;
+}
+
+/* FOOTER */
+
 #footer {
 	font-size: 10pt;
-	margin-top: 20px;
 	text-align: center;
 	order: 3;
 }
@@ -95,33 +118,50 @@ a.socialButton {
 	color: pink;
 }
 
-@media screen and (min-width: 500px) {
+
+.one {
+		background-color: tomato;
+	}
+
+	.two {
+		background-color: steelblue;
+	}
+
+	.three {
+		background-color: tomato;
+	}
+
+	.four {
+		background-color: steelblue;
+	}
+
+	.five {
+		background-color: tomato;
+	}
+	.six {
+		background-color: steelblue;
+	}
+
+/* ============== MEDIA QUERY =====================*/
+@media screen and (min-width: 650px) {
 	#container {
 		display: grid;
 		margin: 0;
 		grid-template-columns: 10% 40% 40% 10%;
-		grid-template-rows: 10% auto 20%;
+		grid-template-rows: 10% 15% auto 10%;
 	}
+
+	/* HOME or INDEX PAGE */
 
 	#introduction {
 		grid-column: 2/3;
-		grid-row: 2/3;
-	}
-
-	#logo {
-		grid-column: 3/4;
-		grid-row: 2/3;
-		width: 90%;
-	
-	}
-
-	#introduction  {
+		grid-row: 2/4;
 		letter-spacing: 2pt;
 		padding: 0 30px;
-	}	
+	}
 
 	#introduction p{
-		font-size: 25pt;
+		font-size: 2.5vw;
 		margin: 0;
 	}
 
@@ -130,11 +170,90 @@ a.socialButton {
 		margin: 0 auto;
 	}
 
+	#social span {
+		font-size: .8vw;
+	}
+
+	#logo {
+		grid-column: 3/4;
+		grid-row: 2/4;
+		width: 90%;
+	
+	}
+
+	/* PROJECTS PAGE */
+
+	#header {
+		grid-column: 2/4;
+		grid-row: 2/3	;
+	}
+
+	#projects {
+		grid-column: 2/4;
+		grid-row: 3/4	;
+		display: grid;
+		grid-template-columns: repeat(8, 20fr);
+		grid-template-rows: repeat(4, 20fr);
+		grid-gap: 10px;
+	}
+
+	.card {
+		transition: all .2s;
+	}
+
+	.card:hover {
+		transform: scale(1.1);
+		z-index: 2;
+	}
+
+	.one {
+		grid-column: 1/3;
+		grid-row: 1/4;
+		background-color: tomato;
+	}
+
+	.two {
+		grid-column: 3/5;
+		grid-row: 1/3;
+		background-color: steelblue;
+	}
+
+	.three {
+		grid-column: 3/5;
+		grid-row: 3/5;
+		background-color: tomato;
+	}
+
+	.four {
+		grid-column: 5/7;
+		grid-row: 1/4;
+		background-color: steelblue;
+	}
+
+	.five {
+		grid-column: 5/7;
+		grid-row: 4/5;
+		background-color: tomato;
+	}
+	.six {
+		grid-column: 7/9;
+		grid-row: 2/5;
+		background-color: steelblue;
+	}
+
+	.nav {
+		grid-column: 7/9;
+		justify-self: center;
+		align-self: center;
+		font-size: 2vw;
+	}
+
 	#footer {
 		margin: 0;
 		grid-column: 2/4;		
-		grid-row: 3/4;
+		grid-row: 4/5;
   	justify-self: center;
   	align-self: center;
+  	font-size: .9vw;
 	}
 }

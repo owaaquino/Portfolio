@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="style-grid.css">
 </head>
 <body>
-	<div id="container">
+<div id="main_container">
+	
+	<div id="home_page" class="container">
 		<nav id="mainNav">
-			<li class="selected"><a href="#">HOME</a></li>
-			<li><a href="projects.html">PROJECTS</a></li>
-			<li><a href="contact.html">CONTACT</a></li>
+			<li class="selected"><a href="#home">HOME</a></li>
+			<li><a href="#project_page">PROJECTS</a></li>
+			<li><a href="#contact_page">CONTACT</a></li>
 		</nav>
 		<div id="introduction">
 			<p>Hi!</p>
@@ -34,10 +36,124 @@
 		</div>
 		<div id="logo">
 			<img src="img/banner.svg" alt="dev mode">
+		</div> 
+	</div> <!-- END OF HOME -->
+
+	<div id="project_page" class="container">
+		<div class="header">
+			<h1>Projects</h1>
+			<p>Here are some of my personal projects.</p>
 		</div>
+		<div id="projects">
+			<li class="card one">
+				<div class="card_description">				
+					<h3>Mono-Achromatic</h3>
+					<p>A photographer portfolio web site I created using CSS-Grid as its layout.</p>
+					<ul>
+						<li>
+							<a href="" target="window">Live</a>
+						</li>
+						<li>
+							<a href="https://github.com/owaaquino/Personal-Projects/tree/master/mono-chormatic.com" target="window">Github</a>
+						</li>
+						<li>
+							<a href="https://www.behance.net/gallery/41277285/Photography-Portfolio-Web-Site-(Study)" target="window">Behance</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="card two">
+				<div class="card_description">				
+					<h3>To-Do-List App</h3>
+					<p>A to-do list app that has a local storage functionality.</p>
+					<ul>
+						<li>
+							<a href="https://to-do-list.netlify.com/" target="window">Live</a>
+						</li>
+						<li>
+							<a href="https://github.com/owaaquino/To-Do-List" target="window">Github</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="card three">
+				<div class="card_description">				
+					<h3>Boom-boom-box</h3>
+					<p>Is a drum pad simulator created with vanilla javascript</p>
+					<ul>
+						<li>
+							<a href="http://boom-boom-box.netlify.com/" target="window">Live</a>
+						</li>
+						<li>
+							<a href="https://github.com/owaaquino/Drumkit" target="window">Github</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="card four">
+				<div class="card_description" target="window">				
+					<h3>Company Web-site</h3>
+					<p>A template for a company web-site.</p>
+					<ul>
+						<li>
+							<a href="" target="window">Live</a>
+						</li>
+						<li>
+							<a href="https://github.com/owaaquino/Personal-Projects/tree/master/construction.com" target="window">Github</a>
+						</li>
+						<li>
+							<a href="https://www.behance.net/gallery/55328065/Construction-Site-(Experimental-Project)" target="window">Behance</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="card five">
+				<div class="card_description">				
+					<h3>Illustration</h3>
+					<p>Oh yeah I illustrate too using Adobe Illustration.</p>
+					<ul>
+						<li>
+							<a href="https://www.behance.net/gallery/56093457/Self-proclaimed-Front-End-Developer" target="window">Behance</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="card six">
+				<div class="card_description">				
+					<h3>Porfolio Website</h3>
+					<p>Template for a portfolio web-site. My first portfolio web site.</p>
+					<ul>
+						<li>
+							<a href="" target="window">Live</a>
+						</li>
+						<li>
+							<a href="https://github.com/owaaquino/Personal-Projects/tree/master/owaaqiuno2.com" target="window">Github</a>
+						</li>
+						<li>
+							<a href="https://www.behance.net/gallery/24318955/owaaquino-Portfolio-website-(Template)" target="window">Behance</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</div>
+	</div> <!-- END OF PROJECTS -->
+
+	<div id="contact_page">
+		<div class="header">
+			<h1>Get in touch</h1>
+			<p>If you want help on a new web project or simply need someone to collaborate with.</p>
+		</div>
+		<div id="contact_info">
+			<h1>owa.aquino@hotmail.com</h1>
+			<p> +63 - 989 - 9542381 </p>
+		</div>
+	</div> <!-- END OF  CONTACTS-->
+
+	<div id="footer_page">	
 		<footer id="footer">
 			<p>Made with <span class="heart">❤</span>.</p>
 		</footer>
-	</div>
+	</div> <!-- END OF FOOTER-->
+</div>
 </body>
 </html>

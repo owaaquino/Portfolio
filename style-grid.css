@@ -227,7 +227,6 @@ a.socialButton {
 @media screen and (min-width: 650px) {
 
 	#main_container {
-		grid-gap: 40px;
 		grid-template-columns: 10% 40% 40% 10%;
 	}
 
@@ -265,7 +264,7 @@ a.socialButton {
 		grid-column: 1/2;
 		grid-row: 3/4;
 		letter-spacing: 2pt;
-		padding: 0 30px;
+		padding: 0 10px;
 	}
 
 	#introduction p{
@@ -379,12 +378,19 @@ a.socialButton {
 
 	/* CONTACTS */
 
+	#contact_page {
+		padding: 50px 0;
+	}
+
 	#contact_info {
+		padding: 30px;
 		grid-column: 2/4;
 		grid-row: 3/4;
 		justify-self: center;
 		text-align: center;
 	}
+
+	/* FOOTER */
 
 	#footer {
 		margin: 0;
